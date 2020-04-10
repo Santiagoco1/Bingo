@@ -1,8 +1,10 @@
-def saluado():
-    return "Hola. ¿Qué tal?"
 
-def sumar(a, b):
-    return a + b
+def carton():
+    carton = (
+        (1,0,0,1,1,0,1,0,1),
+        (0,1,1,1,0,1,1,1,1),
+        (0,1,0,0,1,0,0,1,0)
+    )
+    return carton
 
-def restar(a, b):
-    return a - b
+print(carton())

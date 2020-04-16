@@ -7,6 +7,7 @@ def contar_celdas_ocupadas():
         for celda in fila:
             contador = contador + celda
     
+    # Esoeramos encontrar 15 celdas ocupadas.
     return contador
 
 def test_validar_celdas_ocupadas_igual_a_quince():

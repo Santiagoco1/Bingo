@@ -2,11 +2,11 @@
 #Los número uno representan celdas con números en el carton.
 
 def carton():
-    c = (
+    mi_carton = (
         (0,0,0,1,1,0,1,0,1),
         (0,1,0,1,0,1,1,1,1),
         (0,1,0,0,1,0,1,1,0)
     )
-    return c
+    return mi_carton
 
 print(carton())

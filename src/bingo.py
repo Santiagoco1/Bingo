@@ -3,9 +3,9 @@
 
 def carton():
     mi_carton = (
-        (0,1,2,0,4,0,6,0,8),
-        (0,0,2,0,4,5,0,0,8),
-        (0,1,0,3,4,0,6,7,8)
+        (0,1,2,0,4,0,6,0,7),
+        (0,0,3,0,5,6,0,0,8),
+        (0,2,0,3,6,0,7,8,9)
     )
     return mi_carton
 
@@ -54,3 +54,14 @@ def validar_orden_creciente_filas():
             if fila[i] > fila[i+1] and fila[i+1] != 0:
                 return False
     return True
+
+def validar_orden_creciente_columnas():
+    mi_carton = carton()
+    for columna in range(0,9):
+        for fila in range(0,2):
+            if mi_carton[fila][columna] > mi_carton[fila+1][columna] and mi_carton[fila+1][columna] != 0:
+                return False
+    return True
+
+            
+

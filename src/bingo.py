@@ -1,11 +1,11 @@
-#Los ceros representan celdas vacias en el caron.
+#Los ceros representan celdas vacias en el carton.
 #Los número uno representan celdas con números en el carton.
 
 def carton():
     mi_carton = (
-        (0,1,2,0,4,0,6,0,7),
-        (0,0,3,0,5,6,0,0,8),
-        (0,2,0,3,6,0,7,8,9)
+        (3,0,20,36,0,0,63,71,0),
+        (0,13,23,0,42,50,0,75,0),
+        (6,0,0,39,0,54,69,0,83)
     )
     return mi_carton
 
@@ -63,5 +63,21 @@ def validar_orden_creciente_columnas():
                 return False
     return True
 
-            
+def validar_numeros_repetidos():
+    c = 1
+    f = 0
+    mi_carton = carton()
+    for fila in carton():
+        for celda in fila:
+            if c == 9:
+                    f += 1
+                    c = 0
+            if celda != 0:
+                for fila2 in range(f,3):
+                    for celda2 in range(c,9):
+                        if mi_carton[fila2][celda2] == celda:
+                            return False
+            c += 1
+    return True
+
 

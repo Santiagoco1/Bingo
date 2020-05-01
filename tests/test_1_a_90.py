@@ -1,10 +1,5 @@
-from src.bingo import carton
+from src.bingo import validar_1_a_90
 
 def test_validar_uno_a_noventa():
-    mi_carton = carton()
-    contador = 0
-
-    for fila in range (0, 3):
-        for columna in range(0, 9):
-            celda = mi_carton[fila][columna]
-            assert celda >= 0 and celda <= 90
+    #Esperemos que cada celda contenga un valor entre 1 y 90
+    assert validar_1_a_90()

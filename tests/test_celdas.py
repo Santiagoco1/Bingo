@@ -1,32 +1,19 @@
-from src.bingo import carton
+from src.bingo import contar_celdas_ocupadas
+from src.bingo import validar_una_celda_por_columna
 
-def contar_celdas_ocupadas():
-    mi_carton = carton()
-    contador = 0
-    for fila in mi_carton:
-        for celda in fila:
-            contador = contador + celda
-    
-    # Esoeramos encontrar 15 celdas ocupadas.
-    return contador
-
-def test_validar_celdas_ocupadas_igual_a_quince():
+def test_validar_celdas_ocupadas():
+    #Esperemos contar quince celdas ocupadas
     assert contar_celdas_ocupadas() == 15
 
 def test_validar_celdas_ocupadas_mayor_a_quince ():
+    #Esperemos contar mas de quince celdas ocupadas
     assert contar_celdas_ocupadas() > 15
 
 def test_validar_celdas_ocupadas_menor_a_quince ():
+    #Esperemos contar menos de quince celdas ocupadas
     assert contar_celdas_ocupadas() < 15
 
 def test_validar_una_celda_por_columna():
-    contador = 0
-    celda_columna = True
-    mi_carton = carton()
-    for i in range(8):
-        for fila in mi_carton:
-            contador += fila[i]
-        if contador < 1:
-            celda_columna = False
-
-    assert celda_columna
+    #Esperemos que haya una celda por columna
+    assert validar_una_celda_por_columna() == 9
+    

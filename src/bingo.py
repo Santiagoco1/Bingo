@@ -170,7 +170,7 @@ def imprimirCarton(carton):
     print("\n")
     for columna in range(0, 3):
         for fila in range(0, 9):
-            print(carton[fila][columna])
+            print(carton[fila][columna], end = ' ')
         print("\n")
 
 comprobarCarton()

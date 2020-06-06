@@ -1,4 +1,4 @@
-https://travis-ci.com/Santiagoco1/bingo.svg?branch=master
+[![Build Status](https://travis-ci.com/Santiagoco1/bingo.svg?branch=master)](https://travis-ci.com/Santiagoco1/bingo)
 
 # Reglas que hacen que un cartón sea considerado válido:
 

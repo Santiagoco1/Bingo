@@ -5,10 +5,10 @@ def comprobarCarton():
     for i in range(0, 100000):
         carton = intentoCarton()
         if( validar_test_1(carton) and validar_test_2(carton) and validar_test_3(carton) and validar_test_4(carton) and validar_test_5(carton) and validar_test_6(carton) and validar_test_7(carton) and validar_test_8(carton) and validar_test_9(carton) and validar_test_10(carton) and validar_test_11(carton) and validar_test_12(carton)):
-            imprimirCarton(carton)
+            return carton
             break
 
-# Los números del carton se encuentran en el rango 1 a 90
+# Los numeros del carton se encuentran en el rango 1 a 90
 def validar_test_1(carton):
     for columna in range(0, 9):
         for celda in range(0, 3):
@@ -17,7 +17,7 @@ def validar_test_1(carton):
                     return False
     return True
 
-# No hay números repetidos en el carton.
+# No hay numeros repetidos en el carton.
 def validar_test_2(carton):
     ce = 1
     co = 0
@@ -73,20 +73,20 @@ def validar_test_5(carton):
     else:
         return True
 
-# Los números de las columnas izquierdas son menores que los de las columnas a la derecha.
+# Los numeros de las columnas izquierdas son menores que los de las columnas a la derecha.
 def validar_test_6(carton):
     for fila in range(0, 3):
-        for columna in range(0, 9):
+        for columna in range(0, 8):
             if carton[columna][fila] != 0:
                 for columna2 in range(columna+1, 9):
                     if carton[columna][fila] >= carton[columna2][fila] and carton[columna2][fila] != 0:
                         return False
     return True
 
-# Para una misma columna, sus números están ordenados de menor a mayor de arriba hacia abajo.
+# Para una misma columna, sus numeros estan ordenados de menor a mayor de arriba hacia abajo.
 def validar_test_7(carton):
     for columna in range(0, 9):
-        for fila in range(0, 3):
+        for fila in range(0, 2):
             if carton[columna][fila] != 0:
                 for fila2 in range(fila+1,3):
                     if carton[columna][fila] >= carton[columna][fila2] and carton[columna][fila2] != 0:
@@ -130,7 +130,7 @@ def validar_test_10(carton):
     else:
         return False
 
-# En una fila no existen más de dos celdas vacías consecutivas.
+# En una fila no existen mas de dos celdas vacias consecutivas.
 def validar_test_11(carton):
     for fila in range(0,3):
         for columna in range(0,7):
@@ -138,19 +138,39 @@ def validar_test_11(carton):
                 return False
     return True 
 
-# En una fila no existen más de dos celdas ocupadas consecutivas.
+# En una fila no existen mas de dos celdas ocupadas consecutivas.
 def validar_test_12(carton):
     for fila in range(0,3):
         for columna in range(0,7):
             if carton[columna][fila] != 0 and carton[columna+1][fila] != 0 and carton[columna+2][fila] != 0:
                 return False
-    return True 
+    return True
+
+# Devuelve el numero total de celdas ocupadas
+def contar_celdas_ocupadas(carton):
+    i = 0
+    for columna in range(0, 9):
+        for fila in range(0, 3):
+            if carton[columna][fila] != 0:
+                i += 1
+    return i
+
+# No pueden existir filas vacias.
+def validar_una_celda_por_fila(carton):
+    for fila in range(0, 3):
+        i = 0
+        for columna in range(0, 9):
+            if carton[columna][fila] != 0:
+                i += 1
+        if i < 1:
+            return False
+    return True
 
 def imprimirCarton(carton):
     print("\n")
     for columna in range(0, 3):
         for fila in range(0, 9):
-            print(carton[fila][columna], end = ' ')
+            print(carton[fila][columna])
         print("\n")
 
 comprobarCarton()

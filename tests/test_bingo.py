@@ -12,6 +12,7 @@ from src.bingo import validar_test_9
 from src.bingo import validar_test_10
 from src.bingo import validar_test_11
 from src.bingo import validar_test_12
+from src.bingo import validar_test_13
 
 
 carton = comprobarCarton()
@@ -63,3 +64,7 @@ def test_11():
 def test_12():
     # En una fila no existen mas de dos celdas ocupadas consecutivas.
     assert validar_test_12(carton)
+
+def test_13():
+    # Cada columna de un carton (contando de izquierda a derecha) contiene numeros que van del 1 al 9, 10 al 19, 20 al 29 ..., 70 al 79 y 80 al 90.
+    assert validar_test_13(carton)

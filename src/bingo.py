@@ -4,7 +4,7 @@ from generarCarton import intentoCarton
 def comprobarCarton():
     for i in range(0, 100000):
         carton = intentoCarton()
-        if( validar_test_1(carton) and validar_test_2(carton) and validar_test_3(carton) and validar_test_4(carton) and validar_test_5(carton) and validar_test_6(carton) and validar_test_7(carton) and validar_test_8(carton) and validar_test_9(carton) and validar_test_10(carton) and validar_test_11(carton) and validar_test_12(carton)):
+        if( validar_test_1(carton) and validar_test_2(carton) and validar_test_3(carton) and validar_test_4(carton) and validar_test_5(carton) and validar_test_6(carton) and validar_test_7(carton) and validar_test_8(carton) and validar_test_9(carton) and validar_test_10(carton) and validar_test_11(carton) and validar_test_12(carton) and validar_test_13(carton)):
             return carton
             break
 
@@ -144,6 +144,26 @@ def validar_test_12(carton):
         for columna in range(0,7):
             if carton[columna][fila] != 0 and carton[columna+1][fila] != 0 and carton[columna+2][fila] != 0:
                 return False
+    return True
+
+def validar_test_13(carton):
+# Cada columna de un carton (contando de izquierda a derecha) contiene numeros que van del 1 al 9, 10 al 19, 20 al 29 ..., 70 al 79 y 80 al 90.
+    i = 1
+    j = 9
+    for columna in range(0, 9):
+        for fila in range(0, 3):
+            if carton[columna][fila] != 0:
+                if carton[columna][fila] < i or carton[columna][fila] > j:
+                    return False
+        if i == 1:
+            i += 9
+        else:
+            i += 10
+        if j == 79:
+            j += 11
+        else:
+            j += 10
+
     return True
 
 def imprimirCarton(carton):

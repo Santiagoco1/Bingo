@@ -24,6 +24,7 @@ def intentoCarton():
         numero = random.randint(1, 90)
 
         columna = math.floor(numero / 10)
+        columna = int(columna)
         if(columna == 9):
             columna = 8
         huecos = 0

@@ -1,5 +1,5 @@
 
-from generarCarton import intentoCarton
+from src.generarCarton import intentoCarton
 
 def comprobarCarton():
     for i in range(0, 100000):

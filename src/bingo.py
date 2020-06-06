@@ -173,4 +173,5 @@ def imprimirCarton(carton):
             print(carton[fila][columna])
         print("\n")
 
+        
 comprobarCarton()

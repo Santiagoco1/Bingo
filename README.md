@@ -1,3 +1,5 @@
+https://travis-ci.com/Santiagoco1/bingo.svg?branch=master
+
 # Reglas que hacen que un cartón sea considerado válido:
 
     1) Los números del carton se encuentran en el rango 1 a 90. 

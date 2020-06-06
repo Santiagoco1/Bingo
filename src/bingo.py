@@ -146,26 +146,6 @@ def validar_test_12(carton):
                 return False
     return True
 
-# Devuelve el numero total de celdas ocupadas
-def contar_celdas_ocupadas(carton):
-    i = 0
-    for columna in range(0, 9):
-        for fila in range(0, 3):
-            if carton[columna][fila] != 0:
-                i += 1
-    return i
-
-# No pueden existir filas vacias.
-def validar_una_celda_por_fila(carton):
-    for fila in range(0, 3):
-        i = 0
-        for columna in range(0, 9):
-            if carton[columna][fila] != 0:
-                i += 1
-        if i < 1:
-            return False
-    return True
-
 def imprimirCarton(carton):
     print("\n")
     for columna in range(0, 3):

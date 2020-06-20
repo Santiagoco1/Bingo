@@ -9,12 +9,13 @@ def comprobarCarton():
 
 # Los numeros del carton se encuentran en el rango 1 a 90
 def validar_test_1(carton):
+    aux = 0
     for columna in range(0, 9):
         for celda in range(0, 3):
-            if celda != 0:
-                if celda < 1 or celda > 90:
-                    return False
-    return True
+            if carton[columna][celda] != 0:
+                if celda >= 1 or celda <= 90:
+                    aux += 1
+    return aux
 
 # No hay numeros repetidos en el carton.
 def validar_test_2(carton):

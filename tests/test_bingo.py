@@ -19,7 +19,7 @@ carton = comprobarCarton()
 
 def test_1():
     # Los numeros del carton se encuentran en el rango 1 a 90
-    assert validar_test_1(carton)
+    assert validar_test_1(carton) == 15
 
 def test_2():
     # No hay numeros repetidos en el carton.

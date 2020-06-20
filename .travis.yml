@@ -3,5 +3,8 @@ python: 3.8
 script:
  - pytest
 
+install:
+  pip install pytest pytest-cov coveralls
+
 after_success:
   coveralls

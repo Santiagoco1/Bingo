@@ -6,7 +6,6 @@ def comprobarCarton():
         carton = intentoCarton()
         if( validar_test_1(carton) and validar_test_2(carton) and validar_test_3(carton) and validar_test_4(carton) and validar_test_5(carton) and validar_test_6(carton) and validar_test_7(carton) and validar_test_8(carton) and validar_test_9(carton) and validar_test_10(carton) and validar_test_11(carton) and validar_test_12(carton) and validar_test_13(carton)):
             return carton
-            break
 
 # Los numeros del carton se encuentran en el rango 1 a 90
 def validar_test_1(carton):

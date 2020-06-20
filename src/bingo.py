@@ -166,11 +166,4 @@ def validar_test_13(carton):
 
     return True
 
-def imprimirCarton(carton):
-    print("\n")
-    for columna in range(0, 3):
-        for fila in range(0, 9):
-            print(carton[fila][columna])
-        print("\n")
-
 comprobarCarton()

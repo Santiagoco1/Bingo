@@ -1,2 +1,73 @@
 
-<h1 class="{{ color }}">{{ usuario }}</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bingo</title>
+    <meta charset="UTF-8">
+</head>
+<style>
+
+    html {
+        width: 100%;
+        height: 100%;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .tabla {
+        margin: auto;
+        width: 80%;
+        height: 500px;
+        display: grid;
+        grid-template: 1fr / repeat(9, 1fr);
+        border: 1px solid black;
+    }
+
+    .columna {
+        display: grid;
+        grid-template: repeat(3, 1fr) / 1fr
+    }
+
+    .celda {
+        background: green;
+        color: black;
+        font-size: 4em;
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .vacia {
+        background: white;
+        border: 1px solid black;
+    }
+</style>
+
+<body>
+    <div class="tabla">
+        {% for columna in range(0,9) %}
+            <div class="columna">
+                {% for celda in range(0,3) %}
+                    {% if carton[columna][celda] == 0 %}
+                    <div class="vacia">
+                    </div>
+                    {% else %}
+                    <div class="celda">
+                        {{ carton[columna][celda] }}
+                    </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
+</body>
+
+</html>

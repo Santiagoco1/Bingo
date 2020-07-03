@@ -165,7 +165,7 @@ def validar_test_13(carton):
 
     return True
 
-def cartonInvalido():
+def cartonInvalido1():
     carton = [
       [101,90,100],
       [0,0,100],
@@ -176,6 +176,22 @@ def cartonInvalido():
       [0,0,0],
       [0,0,0],
       [0,0,0,0],
+      [0]
+    ]
+
+    return carton
+
+def cartonInvalido2():
+    carton = [
+      [101,90,100],
+      [0,0,100],
+      [0,0,90],
+      [0,0,0],
+      [0,0,0],
+      [0,0,0],
+      [0,0,0],
+      [0,0,0],
+      [0,0,0],
       [0]
     ]
 

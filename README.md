@@ -1,5 +1,9 @@
 [![Build Status](https://travis-ci.com/Santiagoco1/bingo.svg?branch=master)](https://travis-ci.com/Santiagoco1/bingo)  [![Coverage Status](https://coveralls.io/repos/github/Santiagoco1/bingo/badge.svg?branch=master)](https://coveralls.io/github/Santiagoco1/bingo?branch=master)
 
+# Bingo
+
+Código en Python 3 que genera un cartón de bingo. Escrito para Adaptación Del Ambiente De Trabajo, Instituto Politécnico Superior "Gral. San Martín", 2020.
+
 # Reglas que hacen que un cartón sea considerado válido:
 
     1) Los números del carton se encuentran en el rango 1 a 90. 

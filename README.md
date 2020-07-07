@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/Santiagoco1/bingo.svg?branch=master)](https://travis-ci.com/Santiagoco1/bingo)  [![Coverage Status](https://coveralls.io/repos/github/Santiagoco1/bingo/badge.svg?branch=master)](https://coveralls.io/github/Santiagoco1/bingo?branch=master)
+[![Build Status](https://travis-ci.com/Santiagoco1/bingo.svg?branch=master)](https://travis-ci.com/Santiagoco1/bingo)  [![Coverage Status](https://coveralls.io/repos/github/Santiagoco1/bingo/badge.svg?branch=master)](https://coveralls.io/github/Santiagoco1/bingo?branch=master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Santiagoco1/bingo/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Santiagoco1/bingo/?branch=master)
 
 # Bingo
 
